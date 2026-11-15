@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  
+  string nama;
+  char kelas;
+  int umur;
+  float nilai;
+  double tinggi;
+  bool lulus = true;
+  
+  printf("Masukan Nama:");
+  getline(cin, nama);
+  
+  printf("Masukan Kelas: ");
+  cin >> kelas;
+  
+  cout << "Masukan Umur: ";
+  cin >> umur;
+  
+  cout << "Masukan Nilai: ";
+  cin >> nilai;
+  
+  cout << "Masukan Tinggi: ";
+  cin >> tinggi;
+  
+  cout << "Nama: " << nama << endl;
+  cout << "Kelas: " << kelas << endl;
+  cout << "Umur: " << umur << endl;
+  cout << "Nilai: " << nilai << endl;
+  cout << "Tinggi: " << tinggi << endl;
+  cout << "Lulus: " << lulus << endl;
+  
+  return 0;
+  
+}
