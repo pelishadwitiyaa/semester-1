@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  // ===== 1. Array string + pencarian linear =====
+  string nama[] = {"Pelisha", "Mona", "Resta", "Tasya", "Eka"};
+  int n = sizeof(nama) / sizeof(nama[0]);
+
+  for (int i = 0; i < n; i++) {
+    cout << "Nama ke-" << i + 1 << ": " << nama[i] << endl;
+  }
+
+  bool ditemukan = false;
+  for (int i = 0; i < n; i++) {
+    if (nama[i] == "Resta") {
+      cout << "Nama ditemukan di indeks " << i << endl;
+      ditemukan = true;
+      break;
+    }
+  }
+  if (!ditemukan) cout << "Nama tidak ditemukan" << endl;
+
+  cout << endl;
+
+  // ===== 2. Bubble sort ascending + trace =====
+  int arr[] = {5, 2, 8, 1, 4};
+  int size = sizeof(arr) / sizeof(arr[0]);
+
+  cout << "Array sebelum diurutkan: ";
+  for (int i = 0; i < size; i++) cout << arr[i] << " ";
+  cout << endl;
+
+  for (int i = 0; i < size - 1; i++) {
+    for (int j = 0; j < size - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        int temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;  
+        cout << "iterasi i ke " << i << " dan j ke " << j << ": ";
+        for (int k = 0; k < size; k++) cout << arr[k] << " ";
+        cout << endl;
+      }
+    }
+  }
+
+  cout << "Array setelah diurutkan (ascending): ";
+  for (int i = 0; i < size; i++) cout << arr[i] << " ";
+  cout << endl;
+
+  return 0;   
+}
