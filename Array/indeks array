@@ -1,0 +1,23 @@
+#include <iostream> 
+using namespace std;
+
+int main (){
+  string arr[] = {"Andi", "Budi", "Cery"};
+  int size = sizeof(arr)/sizeof(arr[0]);
+  bool find = false;
+  string target = "Pelisha";
+  
+  for(int i=0; i < size; i++){
+    if( arr[i] == target){
+      cout << "Nama " << arr[i] << " ditemukan di indeks ke-" << i;
+      
+      find = true;
+      break;
+    }
+  }
+  
+  if(!find){
+    cout << "Nama tidak ditemukan";
+  }
+  return 0;
+}
