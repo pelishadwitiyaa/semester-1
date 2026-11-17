@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int kali (int x, int y){
+  return x*y;
+}
+
+int main(){
+  
+  cout << "Hasil perkalian adalah " << kali (6, 4) << endl;
+  
+  return 0;
+}
